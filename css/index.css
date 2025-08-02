@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+a,
+p {
+  color: white;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 5px; /* Ширина скроллбара */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Цвет трека (фона) скроллбара */
+  border-radius: 4px; /* Закругление углов трека */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #888; /* Цвет ползунка скроллбара */
+  border-radius: 4px; /* Закругление углов ползунка */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Цвет ползунка при наведении */
+}
+
+.scrollbar-custom2::-webkit-scrollbar {
+  width: 3px; /* Ширина скроллбара на телефонах */
+}
+
+@media (min-width: 768px) {
+  .scrollbar-custom2::-webkit-scrollbar {
+    width: 4px; /* Ширина скроллбара на десктопах */
+  }
+}
+
+.scrollbar-custom2::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Цвет трека (фона) скроллбара */
+  border-radius: 4px; /* Закругление углов трека */
+}
+
+.scrollbar-custom2::-webkit-scrollbar-thumb {
+  background: #888; /* Цвет ползунка скроллбара */
+  border-radius: 4px; /* Закругление углов ползунка */
+}
+
+.scrollbar-custom2::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Цвет ползунка при наведении */
+}
+
+.yarl__thumbnails_thumbnail {
+  border: 0.5px solid #fff !important;
+  filter: brightness(50%) !important;
+}
+
+.yarl__thumbnails_thumbnail_active {
+  border: 1px solid #fff !important;
+  filter: brightness(100%) !important;
+}
+
+input:invalid {
+  border-color: #ff0000;
+}
+
+/* Стилизация валидационных сообщений */
+input::-webkit-validation-bubble-message {
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+}
